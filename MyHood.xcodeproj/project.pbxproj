@@ -12,6 +12,10 @@
 		ABB9F61D1BE2B5B900170E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB9F61B1BE2B5B900170E79 /* Main.storyboard */; };
 		ABB9F61F1BE2B5B900170E79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB9F61E1BE2B5B900170E79 /* Assets.xcassets */; };
 		ABB9F6221BE2B5B900170E79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB9F6201BE2B5B900170E79 /* LaunchScreen.storyboard */; };
+		ABB9F62B1BE2B64700170E79 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9F62A1BE2B64700170E79 /* Post.swift */; };
+		ABB9F62D1BE2C02700170E79 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9F62C1BE2C02700170E79 /* PostCell.swift */; };
+		ABB9F6311BE2E6E100170E79 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9F6301BE2E6E100170E79 /* AddPostVC.swift */; };
+		ABB9F6341BE323E900170E79 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB9F6331BE323E900170E79 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		ABB9F61E1BE2B5B900170E79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABB9F6211BE2B5B900170E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB9F6231BE2B5B900170E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB9F62A1BE2B64700170E79 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		ABB9F62C1BE2C02700170E79 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		ABB9F6301BE2E6E100170E79 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		ABB9F6331BE323E900170E79 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		ABB9F6161BE2B5B900170E79 /* MyHood */ = {
 			isa = PBXGroup;
 			children = (
+				ABB9F6321BE323DD00170E79 /* Services */,
+				ABB9F62F1BE2C56900170E79 /* View */,
+				ABB9F62E1BE2C55E00170E79 /* Controller */,
+				ABB9F6291BE2B63900170E79 /* Model */,
 				ABB9F6171BE2B5B900170E79 /* AppDelegate.swift */,
-				ABB9F6191BE2B5B900170E79 /* ViewController.swift */,
-				ABB9F61B1BE2B5B900170E79 /* Main.storyboard */,
 				ABB9F61E1BE2B5B900170E79 /* Assets.xcassets */,
-				ABB9F6201BE2B5B900170E79 /* LaunchScreen.storyboard */,
 				ABB9F6231BE2B5B900170E79 /* Info.plist */,
 			);
 			path = MyHood;
+			sourceTree = "<group>";
+		};
+		ABB9F6291BE2B63900170E79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABB9F62A1BE2B64700170E79 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ABB9F62E1BE2C55E00170E79 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ABB9F6191BE2B5B900170E79 /* ViewController.swift */,
+				ABB9F6301BE2E6E100170E79 /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ABB9F62F1BE2C56900170E79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABB9F61B1BE2B5B900170E79 /* Main.storyboard */,
+				ABB9F6201BE2B5B900170E79 /* LaunchScreen.storyboard */,
+				ABB9F62C1BE2C02700170E79 /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ABB9F6321BE323DD00170E79 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ABB9F6331BE323E900170E79 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB9F62B1BE2B64700170E79 /* Post.swift in Sources */,
 				ABB9F61A1BE2B5B900170E79 /* ViewController.swift in Sources */,
+				ABB9F6311BE2E6E100170E79 /* AddPostVC.swift in Sources */,
+				ABB9F6341BE323E900170E79 /* DataService.swift in Sources */,
 				ABB9F6181BE2B5B900170E79 /* AppDelegate.swift in Sources */,
+				ABB9F62D1BE2C02700170E79 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
