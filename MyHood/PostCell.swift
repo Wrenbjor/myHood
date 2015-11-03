@@ -9,19 +9,24 @@
 import UIKit
 
 class PostCell: UITableViewCell {
-
+    
     @IBOutlet weak var postImage: UIImageView!
-    @IBOutlet weak var titleLable: UILabel!
-    @IBOutlet weak var descLable: UILabel!
+    @IBOutlet weak var postTitle: UILabel!
+    @IBOutlet weak var postDesc: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         postImage.layer.cornerRadius = postImage.frame.size.width / 2
         postImage.clipsToBounds = true
     }
-
-    func configureCell(post: Post){
-        titleLable.text = post.title
-        descLable.text = post.postDesc
+    
+    func configureCell(post: Post) {
+        
+        postDesc.text = post.description
+        postTitle.text = post.title
+        postImage.image = DataService.instance.imageForPath(post.imagePath)
+        
     }
+    
 }

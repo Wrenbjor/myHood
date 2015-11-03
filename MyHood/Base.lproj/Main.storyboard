@@ -74,9 +74,9 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <outlet property="descLable" destination="YNx-hM-jAa" id="vbS-Hq-Pox"/>
-                                            <outlet property="postImage" destination="mrl-ZU-hOp" id="LMY-R7-KfB"/>
-                                            <outlet property="titleLable" destination="ndx-GG-lyj" id="LwG-0E-QbV"/>
+                                            <outlet property="postDesc" destination="YNx-hM-jAa" id="zzT-qM-937"/>
+                                            <outlet property="postImage" destination="mrl-ZU-hOp" id="QPM-tE-xc6"/>
+                                            <outlet property="postTitle" destination="ndx-GG-lyj" id="Ut9-Fl-u81"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

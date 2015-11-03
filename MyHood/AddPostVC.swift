@@ -21,7 +21,6 @@ class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
         postImage.layer.cornerRadius = postImage.frame.size.width/2
         postImage.clipsToBounds = true
-        
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
@@ -34,7 +33,9 @@ class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     @IBAction func makePostButtonPressed(sender: AnyObject) {
         if let title = titleField.text, let desc = descriptionField.text, let img = postImage.image {
-            let post = Post(imagePath: "", title: title, description: desc)
+            let imgPath = DataService.instance.saveImageAndCreatePath(img)
+            
+            let post = Post(imagePath: imgPath, title: title, description: desc)
             DataService.instance.addPost(post)
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
